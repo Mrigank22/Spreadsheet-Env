@@ -1,0 +1,71 @@
+{
+ "workbooks": 1691,
+ "seconds": 58.8,
+ "engines": {
+  "formualizer": {
+   "cells": 351714,
+   "agree": 351714,
+   "circular_wb_cells": 79618,
+   "circular_wb_agree": 79618,
+   "acyclic_wb_cells": 272096,
+   "acyclic_wb_agree": 272096,
+   "agreement": 1.0,
+   "by_function": {
+    "(arith)": {
+     "agree": 280066
+    },
+    "AVERAGE": {
+     "agree": 3053
+    },
+    "MAX": {
+     "agree": 14903
+    },
+    "MIN": {
+     "agree": 5908
+    },
+    "NPV": {
+     "agree": 10000
+    },
+    "ROUND": {
+     "agree": 8511
+    },
+    "SUM": {
+     "agree": 29273
+    }
+   },
+   "examples": []
+  },
+  "ironcalc": {
+   "skipped_circular_workbooks": 254,
+   "cells": 271823,
+   "agree": 271823,
+   "acyclic_wb_cells": 271823,
+   "acyclic_wb_agree": 271823,
+   "agreement": 1.0,
+   "by_function": {
+    "(arith)": {
+     "agree": 218428
+    },
+    "AVERAGE": {
+     "agree": 5
+    },
+    "MAX": {
+     "agree": 10365
+    },
+    "MIN": {
+     "agree": 4385
+    },
+    "NPV": {
+     "agree": 10000
+    },
+    "ROUND": {
+     "agree": 6479
+    },
+    "SUM": {
+     "agree": 22161
+    }
+   },
+   "examples": []
+  }
+ }
+}

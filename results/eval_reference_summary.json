@@ -1,0 +1,307 @@
+{
+ "ALL/dall": {
+  "n": 80,
+  "solved": 80,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.954180263735425,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.2,
+  "cost_usd": 0
+ },
+ "build/d1": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "build/d2": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "build/d3": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "build/d4": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "build/d5": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "build/dall": {
+  "n": 20,
+  "solved": 20,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.8388698745050667,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "build_free/d1": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "build_free/d2": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 2.0,
+  "cost_usd": 0
+ },
+ "build_free/d3": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 2.0,
+  "cost_usd": 0
+ },
+ "build_free/d4": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 2.0,
+  "cost_usd": 0
+ },
+ "build_free/d5": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 2.0,
+  "cost_usd": 0
+ },
+ "build_free/dall": {
+  "n": 20,
+  "solved": 20,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.8388698745050667,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.8,
+  "cost_usd": 0
+ },
+ "dcf/d1": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "dcf/d2": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "dcf/d3": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "dcf/d4": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "dcf/d5": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "dcf/dall": {
+  "n": 20,
+  "solved": 20,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.8388698745050667,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "repair/d1": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "repair/d2": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "repair/d3": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "repair/d4": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "repair/d5": {
+  "n": 4,
+  "solved": 4,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.5100999795960008,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "repair/dall": {
+  "n": 20,
+  "solved": 20,
+  "pass_rate": 1.0,
+  "ci95": [
+   0.8388698745050667,
+   1.0
+  ],
+  "mean_reward": 1.0,
+  "mean_steps": 1.0,
+  "cost_usd": 0
+ },
+ "_meta": {
+  "episodes": 80,
+  "spent_this_run_usd": 0.0,
+  "minutes_this_run": 0.3
+ }
+}

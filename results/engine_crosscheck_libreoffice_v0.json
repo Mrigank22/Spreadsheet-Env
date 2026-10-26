@@ -1,0 +1,128 @@
+{
+ "workbooks": 891,
+ "seconds": 319.5,
+ "engines": {
+  "formualizer": {
+   "cells": 186246,
+   "agree": 186246,
+   "acyclic_wb_cells": 138011,
+   "acyclic_wb_agree": 138011,
+   "circular_wb_cells": 48235,
+   "circular_wb_agree": 48235,
+   "agreement": 1.0,
+   "by_function": {
+    "(arith)": {
+     "agree": 144421
+    },
+    "AVERAGE": {
+     "agree": 2111
+    },
+    "MAX": {
+     "agree": 9874
+    },
+    "MIN": {
+     "agree": 4064
+    },
+    "ROUND": {
+     "agree": 5872
+    },
+    "SUM": {
+     "agree": 19904
+    }
+   },
+   "examples": []
+  },
+  "ironcalc": {
+   "cells": 137738,
+   "agree": 137738,
+   "acyclic_wb_cells": 137738,
+   "acyclic_wb_agree": 137738,
+   "skipped_circular_workbooks": 175,
+   "agreement": 1.0,
+   "by_function": {
+    "(arith)": {
+     "agree": 108467
+    },
+    "AVERAGE": {
+     "agree": 5
+    },
+    "MAX": {
+     "agree": 6751
+    },
+    "MIN": {
+     "agree": 3026
+    },
+    "ROUND": {
+     "agree": 4472
+    },
+    "SUM": {
+     "agree": 15017
+    }
+   },
+   "examples": []
+  },
+  "libreoffice": {
+   "cells": 186246,
+   "agree": 165076,
+   "acyclic_wb_cells": 138011,
+   "acyclic_wb_agree": 138011,
+   "disagree": 21170,
+   "circular_wb_cells": 48235,
+   "circular_wb_disagree": 21170,
+   "circular_wb_agree": 27065,
+   "agreement": 0.8863331293021058,
+   "by_function": {
+    "(arith)": {
+     "agree": 131630,
+     "disagree": 12791
+    },
+    "AVERAGE": {
+     "agree": 436,
+     "disagree": 1675
+    },
+    "MAX": {
+     "agree": 7928,
+     "disagree": 1946
+    },
+    "MIN": {
+     "agree": 4064
+    },
+    "ROUND": {
+     "agree": 4836,
+     "disagree": 1036
+    },
+    "SUM": {
+     "agree": 16182,
+     "disagree": 3722
+    }
+   },
+   "examples": [
+    "build-d5-s0/reference ('bs', 5, 5): ours=13.758163636058564 libreoffice=12.36318696312",
+    "build-d5-s0/reference ('bs', 5, 6): ours=17.47880284418939 libreoffice=14.6040988183306",
+    "build-d5-s0/reference ('bs', 5, 7): ours=21.730978263319233 libreoffice=17.0655020213164",
+    "build-d5-s0/reference ('bs', 5, 8): ours=26.44977545873277 libreoffice=19.7492306796133",
+    "build-d5-s0/reference ('bs', 5, 9): ours=32.15428177890668 libreoffice=23.1112061029604",
+    "build-d5-s0/reference ('bs', 5, 10): ours=41.55819132142625 libreoffice=29.9815977231831",
+    "build-d5-s0/reference ('bs', 8, 5): ours=26.944563636058565 libreoffice=25.54958696312",
+    "build-d5-s0/reference ('bs', 8, 6): ours=31.29815004418939 libreoffice=28.4234460183306",
+    "build-d5-s0/reference ('bs', 8, 7): ours=36.07546065691923 libreoffice=31.4099844149164",
+    "build-d5-s0/reference ('bs', 8, 8): ours=41.32500370089597 libreoffice=34.6244589217765",
+    "build-d5-s0/reference ('bs', 8, 9): ours=47.47576686833477 libreoffice=38.4326911923885",
+    "build-d5-s0/reference ('bs', 8, 10): ours=57.38528541880547 libreoffice=45.8086918205623",
+    "build-d5-s0/reference ('bs', 10, 5): ours=51.02243563605856 libreoffice=49.62745896312",
+    "build-d5-s0/reference ('bs', 10, 6): ours=56.507852780189396 libreoffice=53.6331487543306",
+    "build-d5-s0/reference ('bs', 10, 7): ours=62.44156961088723 libreoffice=57.7760933688844",
+    "build-d5-s0/reference ('bs', 10, 8): ours=68.87129588947423 libreoffice=62.1707511103548",
+    "build-d5-s0/reference ('bs', 10, 9): ours=76.20456579145234 libreoffice=67.1614901155061",
+    "build-d5-s0/reference ('bs', 10, 10): ours=87.31236807585526 libreoffice=75.7357744776121",
+    "build-d5-s0/reference ('bs', 16, 5): ours=17.906545225099663 libreoffice=17.7082913688196",
+    "build-d5-s0/reference ('bs', 16, 6): ours=26.975199629504466 libreoffice=26.6403279784064",
+    "build-d5-s0/reference ('bs', 16, 7): ours=36.529075640476286 libreoffice=36.1187778017583",
+    "build-d5-s0/reference ('bs', 16, 8): ours=46.57703964215807 libreoffice=46.150941248069",
+    "build-d5-s0/reference ('bs', 16, 9): ours=57.0574818567167 libreoffice=56.6712209829316",
+    "build-d5-s0/reference ('bs', 16, 10): ours=67.99213037127335 libreoffice=67.6825200041928",
+    "build-d5-s0/reference ('bs', 17, 5): ours=31.80654522509966 libreoffice=31.6082913688196"
+   ]
+  }
+ }
+}

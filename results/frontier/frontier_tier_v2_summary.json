@@ -1,0 +1,598 @@
+{
+ "ALL/dall": {
+  "solved": 23,
+  "n": 36,
+  "ci95": [
+   0.4757478039083198,
+   0.7752461320781867
+  ],
+  "value_only_solved": 34,
+  "mean_output_tokens": 2375.5833333333335
+ },
+ "abs_build/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2406.0
+ },
+ "abs_build/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3826.0
+ },
+ "abs_build/dall": {
+  "solved": 1,
+  "n": 2,
+  "ci95": [
+   0.09452865480086614,
+   0.9054713451991339
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3116.0
+ },
+ "abs_free/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3220.0
+ },
+ "abs_free/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 0,
+  "mean_output_tokens": 4616.0
+ },
+ "abs_free/dall": {
+  "solved": 1,
+  "n": 2,
+  "ci95": [
+   0.09452865480086614,
+   0.9054713451991339
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3918.0
+ },
+ "abs_repair/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 756.0
+ },
+ "abs_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 829.0
+ },
+ "abs_repair/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 792.5
+ },
+ "credit_build/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1528.0
+ },
+ "credit_build/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3124.0
+ },
+ "credit_build/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 2326.0
+ },
+ "credit_free/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2267.0
+ },
+ "credit_free/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3783.0
+ },
+ "credit_free/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3025.0
+ },
+ "credit_repair/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 786.0
+ },
+ "credit_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 769.0
+ },
+ "credit_repair/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 777.5
+ },
+ "fx_build/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1753.0
+ },
+ "fx_build/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1440.0
+ },
+ "fx_build/dall": {
+  "solved": 0,
+  "n": 2,
+  "ci95": [
+   0.0,
+   0.6576280471103807
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1596.5
+ },
+ "fx_free/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2856.0
+ },
+ "fx_free/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3074.0
+ },
+ "fx_free/dall": {
+  "solved": 0,
+  "n": 2,
+  "ci95": [
+   0.0,
+   0.6576280471103807
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 2965.0
+ },
+ "fx_repair/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1087.0
+ },
+ "fx_repair/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1157.0
+ },
+ "fx_repair/dall": {
+  "solved": 0,
+  "n": 2,
+  "ci95": [
+   0.0,
+   0.6576280471103807
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1122.0
+ },
+ "lbo_build/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3184.0
+ },
+ "lbo_build/dall": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3184.0
+ },
+ "lbo_free/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 5446.0
+ },
+ "lbo_free/dall": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 5446.0
+ },
+ "lbo_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 958.0
+ },
+ "lbo_repair/dall": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 958.0
+ },
+ "pf_build/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 0,
+  "mean_output_tokens": 3750.0
+ },
+ "pf_build/dall": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 0,
+  "mean_output_tokens": 3750.0
+ },
+ "pf_free/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 5942.0
+ },
+ "pf_free/dall": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 5942.0
+ },
+ "pf_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1182.0
+ },
+ "pf_repair/dall": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1182.0
+ },
+ "tax_build/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1343.0
+ },
+ "tax_build/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2406.0
+ },
+ "tax_build/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1874.5
+ },
+ "tax_free/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2815.0
+ },
+ "tax_free/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3686.0
+ },
+ "tax_free/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3250.5
+ },
+ "tax_repair/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 480.0
+ },
+ "tax_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1008.0
+ },
+ "tax_repair/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 744.0
+ },
+ "vc_build/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2359.0
+ },
+ "vc_build/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2940.0
+ },
+ "vc_build/dall": {
+  "solved": 0,
+  "n": 2,
+  "ci95": [
+   0.0,
+   0.6576280471103807
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 2649.5
+ },
+ "vc_free/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3096.0
+ },
+ "vc_free/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3654.0
+ },
+ "vc_free/dall": {
+  "solved": 0,
+  "n": 2,
+  "ci95": [
+   0.0,
+   0.6576280471103807
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3375.0
+ },
+ "vc_repair/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1007.0
+ },
+ "vc_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 988.0
+ },
+ "vc_repair/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 997.5
+ },
+ "_meta": {
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "total_cost_usd": 1.1756880000000005,
+  "failed_requests": 0,
+  "bugs_fixed": {
+   "visible": [
+    12,
+    12
+   ],
+   "latent": [
+    17,
+    17
+   ]
+  }
+ }
+}

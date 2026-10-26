@@ -1,0 +1,478 @@
+{
+ "ALL/dall": {
+  "solved": 21,
+  "n": 30,
+  "ci95": [
+   0.5212387898833981,
+   0.8333543735604105
+  ],
+  "value_only_solved": 29,
+  "mean_output_tokens": 2267.0333333333333
+ },
+ "abs_build/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2825.0
+ },
+ "abs_build/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3177.0
+ },
+ "abs_build/dall": {
+  "solved": 0,
+  "n": 2,
+  "ci95": [
+   0.0,
+   0.6576280471103807
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3001.0
+ },
+ "abs_free/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3287.0
+ },
+ "abs_free/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 4145.0
+ },
+ "abs_free/dall": {
+  "solved": 0,
+  "n": 2,
+  "ci95": [
+   0.0,
+   0.6576280471103807
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3716.0
+ },
+ "abs_repair/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 540.0
+ },
+ "abs_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 999.0
+ },
+ "abs_repair/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 769.5
+ },
+ "lbo_build/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2297.0
+ },
+ "lbo_build/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2727.0
+ },
+ "lbo_build/dall": {
+  "solved": 1,
+  "n": 2,
+  "ci95": [
+   0.09452865480086614,
+   0.9054713451991339
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 2512.0
+ },
+ "lbo_free/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 4228.0
+ },
+ "lbo_free/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 4160.0
+ },
+ "lbo_free/dall": {
+  "solved": 1,
+  "n": 2,
+  "ci95": [
+   0.09452865480086614,
+   0.9054713451991339
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 4194.0
+ },
+ "lbo_repair/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 553.0
+ },
+ "lbo_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 873.0
+ },
+ "lbo_repair/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 713.0
+ },
+ "pf_build/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2878.0
+ },
+ "pf_build/d5": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 0,
+  "mean_output_tokens": 3426.0
+ },
+ "pf_build/dall": {
+  "solved": 0,
+  "n": 2,
+  "ci95": [
+   0.0,
+   0.6576280471103807
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 3152.0
+ },
+ "pf_free/d3": {
+  "solved": 0,
+  "n": 1,
+  "ci95": [
+   0.0,
+   0.7934567085261071
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 4015.0
+ },
+ "pf_free/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 4700.0
+ },
+ "pf_free/dall": {
+  "solved": 1,
+  "n": 2,
+  "ci95": [
+   0.09452865480086614,
+   0.9054713451991339
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 4357.5
+ },
+ "pf_repair/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1152.0
+ },
+ "pf_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1387.0
+ },
+ "pf_repair/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1269.5
+ },
+ "saas_build/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1096.0
+ },
+ "saas_build/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2303.0
+ },
+ "saas_build/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1699.5
+ },
+ "saas_free/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1620.0
+ },
+ "saas_free/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2969.0
+ },
+ "saas_free/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 2294.5
+ },
+ "saas_repair/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 775.0
+ },
+ "saas_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1319.0
+ },
+ "saas_repair/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1047.0
+ },
+ "waterfall_build/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 1841.0
+ },
+ "waterfall_build/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2131.0
+ },
+ "waterfall_build/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1986.0
+ },
+ "waterfall_free/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2452.0
+ },
+ "waterfall_free/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 2584.0
+ },
+ "waterfall_free/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 2518.0
+ },
+ "waterfall_repair/d3": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 588.0
+ },
+ "waterfall_repair/d5": {
+  "solved": 1,
+  "n": 1,
+  "ci95": [
+   0.20654329147389294,
+   1.0
+  ],
+  "value_only_solved": 1,
+  "mean_output_tokens": 964.0
+ },
+ "waterfall_repair/dall": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 776.0
+ },
+ "_meta": {
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "total_cost_usd": 0.929944,
+  "failed_requests": 0,
+  "bugs_fixed": {
+   "visible": [
+    0,
+    0
+   ],
+   "latent": [
+    0,
+    0
+   ]
+  }
+ }
+}

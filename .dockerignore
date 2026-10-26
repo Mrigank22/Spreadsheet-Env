@@ -1,0 +1,7 @@
+.venv
+results
+runs
+docs
+tests
+scripts
+docker/libreoffice

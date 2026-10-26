@@ -1,0 +1,882 @@
+{
+ "summary": {
+  "n_mutants": 40,
+  "seconds": 8,
+  "visible": {
+   "n": 30,
+   "value_only": 1.0,
+   "base": 1.0,
+   "perturb": 1.0,
+   "identities": 0.3,
+   "homogeneity": 0.0,
+   "full": 1.0,
+   "static": 0.0,
+   "reference_free": 0.3
+  },
+  "latent": {
+   "n": 10,
+   "value_only": 0.0,
+   "base": 0.0,
+   "perturb": 1.0,
+   "identities": 0.5,
+   "homogeneity": 0.7,
+   "full": 1.0,
+   "static": 0.8,
+   "reference_free": 0.8
+  },
+  "all": {
+   "n": 40,
+   "value_only": 0.75,
+   "base": 0.75,
+   "perturb": 1.0,
+   "identities": 0.35,
+   "homogeneity": 0.175,
+   "full": 1.0,
+   "static": 0.2,
+   "reference_free": 0.425
+  },
+  "by_operator": {
+   "ANCHOR_DROP": {
+    "n": 4,
+    "latent_share": 0.0,
+    "value_only": 1.0,
+    "base": 1.0,
+    "perturb": 1.0,
+    "identities": 0.0,
+    "homogeneity": 0.0,
+    "full": 1.0,
+    "static": 0.0,
+    "reference_free": 0.0
+   },
+   "HARDCODE_PASTE": {
+    "n": 7,
+    "latent_share": 1.0,
+    "value_only": 0.0,
+    "base": 0.0,
+    "perturb": 1.0,
+    "identities": 0.5714285714285714,
+    "homogeneity": 1.0,
+    "full": 1.0,
+    "static": 1.0,
+    "reference_free": 1.0
+   },
+   "JAMMED_CONSTANT": {
+    "n": 1,
+    "latent_share": 1.0,
+    "value_only": 0.0,
+    "base": 0.0,
+    "perturb": 1.0,
+    "identities": 0.0,
+    "homogeneity": 0.0,
+    "full": 1.0,
+    "static": 1.0,
+    "reference_free": 0.0
+   },
+   "LINK_OMISSION": {
+    "n": 3,
+    "latent_share": 0.0,
+    "value_only": 1.0,
+    "base": 1.0,
+    "perturb": 1.0,
+    "identities": 0.3333333333333333,
+    "homogeneity": 0.0,
+    "full": 1.0,
+    "static": 0.0,
+    "reference_free": 0.3333333333333333
+   },
+   "OPERATOR_SWAP": {
+    "n": 5,
+    "latent_share": 0.0,
+    "value_only": 1.0,
+    "base": 1.0,
+    "perturb": 1.0,
+    "identities": 0.0,
+    "homogeneity": 0.0,
+    "full": 1.0,
+    "static": 0.0,
+    "reference_free": 0.0
+   },
+   "PERIOD_OFFSET": {
+    "n": 6,
+    "latent_share": 0.16666666666666666,
+    "value_only": 0.8333333333333334,
+    "base": 0.8333333333333334,
+    "perturb": 1.0,
+    "identities": 0.5,
+    "homogeneity": 0.0,
+    "full": 1.0,
+    "static": 0.0,
+    "reference_free": 0.5
+   },
+   "RANGE_TRUNCATE": {
+    "n": 2,
+    "latent_share": 0.5,
+    "value_only": 0.5,
+    "base": 0.5,
+    "perturb": 1.0,
+    "identities": 1.0,
+    "homogeneity": 0.0,
+    "full": 1.0,
+    "static": 0.0,
+    "reference_free": 1.0
+   },
+   "REF_SHIFT": {
+    "n": 9,
+    "latent_share": 0.0,
+    "value_only": 1.0,
+    "base": 1.0,
+    "perturb": 1.0,
+    "identities": 0.2222222222222222,
+    "homogeneity": 0.0,
+    "full": 1.0,
+    "static": 0.0,
+    "reference_free": 0.2222222222222222
+   },
+   "SIGN_FLIP": {
+    "n": 3,
+    "latent_share": 0.0,
+    "value_only": 1.0,
+    "base": 1.0,
+    "perturb": 1.0,
+    "identities": 0.6666666666666666,
+    "homogeneity": 0.0,
+    "full": 1.0,
+    "static": 0.0,
+    "reference_free": 0.6666666666666666
+   }
+  },
+  "scenario_selection_latent_recall": {
+   "coverage_K1": 0.9,
+   "coverage_K2": 1.0,
+   "coverage_K4": 1.0,
+   "coverage_K8": 0.9,
+   "random_K1": 0.9,
+   "random_K2": 0.9,
+   "random_K4": 1.0,
+   "random_K8": 1.0
+  },
+  "scenario_selection_n_latent": 10
+ },
+ "rows": [
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "HARDCODE_PASTE",
+   "category": "hard-coding",
+   "scope": "row",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": true,
+    "full": true,
+    "static": true,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "PERIOD_OFFSET",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "REF_SHIFT",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "PERIOD_OFFSET",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "ANCHOR_DROP",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "REF_SHIFT",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "REF_SHIFT",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "HARDCODE_PASTE",
+   "category": "hard-coding",
+   "scope": "cell",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": true,
+    "full": true,
+    "static": true,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "HARDCODE_PASTE",
+   "category": "hard-coding",
+   "scope": "row",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": true,
+    "full": true,
+    "static": true,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 2,
+   "seed": 0,
+   "operator": "OPERATOR_SWAP",
+   "category": "logic",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "OPERATOR_SWAP",
+   "category": "logic",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "OPERATOR_SWAP",
+   "category": "logic",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "PERIOD_OFFSET",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "SIGN_FLIP",
+   "category": "logic",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "ANCHOR_DROP",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "PERIOD_OFFSET",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "PERIOD_OFFSET",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "LINK_OMISSION",
+   "category": "omission",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "HARDCODE_PASTE",
+   "category": "hard-coding",
+   "scope": "row",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": true,
+    "full": true,
+    "static": true,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 2,
+   "seed": 1,
+   "operator": "RANGE_TRUNCATE",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "ANCHOR_DROP",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "OPERATOR_SWAP",
+   "category": "logic",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "REF_SHIFT",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "SIGN_FLIP",
+   "category": "logic",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "PERIOD_OFFSET",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "REF_SHIFT",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "LINK_OMISSION",
+   "category": "omission",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "SIGN_FLIP",
+   "category": "logic",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "REF_SHIFT",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 0,
+   "operator": "LINK_OMISSION",
+   "category": "omission",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "JAMMED_CONSTANT",
+   "category": "hard-coding",
+   "scope": "row",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": true,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "HARDCODE_PASTE",
+   "category": "hard-coding",
+   "scope": "cell",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": true,
+    "full": true,
+    "static": true,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "ANCHOR_DROP",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "RANGE_TRUNCATE",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "HARDCODE_PASTE",
+   "category": "hard-coding",
+   "scope": "row",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": true,
+    "full": true,
+    "static": true,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "REF_SHIFT",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "HARDCODE_PASTE",
+   "category": "hard-coding",
+   "scope": "row",
+   "effect": "latent",
+   "detected": {
+    "value_only": false,
+    "base": false,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": true,
+    "full": true,
+    "static": true,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "REF_SHIFT",
+   "category": "reference",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "REF_SHIFT",
+   "category": "reference",
+   "scope": "row",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": true,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": true
+   }
+  },
+  {
+   "level": 3,
+   "seed": 1,
+   "operator": "OPERATOR_SWAP",
+   "category": "logic",
+   "scope": "cell",
+   "effect": "visible",
+   "detected": {
+    "value_only": true,
+    "base": true,
+    "perturb": true,
+    "identities": false,
+    "homogeneity": false,
+    "full": true,
+    "static": false,
+    "reference_free": false
+   }
+  }
+ ]
+}

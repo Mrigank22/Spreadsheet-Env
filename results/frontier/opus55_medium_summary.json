@@ -1,0 +1,268 @@
+{
+ "ALL/dall": {
+  "solved": 40,
+  "n": 40,
+  "ci95": [
+   0.9123754607496077,
+   1.0
+  ],
+  "value_only_solved": 40,
+  "mean_output_tokens": 1513.15
+ },
+ "build/d1": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 140.0
+ },
+ "build/d2": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 368.5
+ },
+ "build/d3": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 514.5
+ },
+ "build/d4": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1762.5
+ },
+ "build/d5": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1994.0
+ },
+ "build/dall": {
+  "solved": 10,
+  "n": 10,
+  "ci95": [
+   0.7224598312333834,
+   1.0
+  ],
+  "value_only_solved": 10,
+  "mean_output_tokens": 955.9
+ },
+ "build_free/d1": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 2781.5
+ },
+ "build_free/d2": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3427.0
+ },
+ "build_free/d3": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3471.0
+ },
+ "build_free/d4": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3998.5
+ },
+ "build_free/d5": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 3850.0
+ },
+ "build_free/dall": {
+  "solved": 10,
+  "n": 10,
+  "ci95": [
+   0.7224598312333834,
+   1.0
+  ],
+  "value_only_solved": 10,
+  "mean_output_tokens": 3505.6
+ },
+ "dcf/d1": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 343.0
+ },
+ "dcf/d2": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 503.0
+ },
+ "dcf/d3": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1229.5
+ },
+ "dcf/d4": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1705.5
+ },
+ "dcf/d5": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 1814.0
+ },
+ "dcf/dall": {
+  "solved": 10,
+  "n": 10,
+  "ci95": [
+   0.7224598312333834,
+   1.0
+  ],
+  "value_only_solved": 10,
+  "mean_output_tokens": 1119.0
+ },
+ "repair/d1": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 99.5
+ },
+ "repair/d2": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 296.5
+ },
+ "repair/d3": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 544.0
+ },
+ "repair/d4": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 564.0
+ },
+ "repair/d5": {
+  "solved": 2,
+  "n": 2,
+  "ci95": [
+   0.34237195288961925,
+   1.0
+  ],
+  "value_only_solved": 2,
+  "mean_output_tokens": 856.5
+ },
+ "repair/dall": {
+  "solved": 10,
+  "n": 10,
+  "ci95": [
+   0.7224598312333834,
+   1.0
+  ],
+  "value_only_solved": 10,
+  "mean_output_tokens": 472.1
+ },
+ "_meta": {
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "total_cost_usd": 0.92383,
+  "failed_requests": 0,
+  "bugs_fixed": {
+   "visible": [
+    10,
+    10
+   ],
+   "latent": [
+    7,
+    7
+   ]
+  }
+ }
+}

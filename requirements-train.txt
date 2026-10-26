@@ -1,0 +1,6 @@
+# GPU training/evaluation of local models (install a CUDA build of torch first)
+trl>=1.16
+transformers>=5
+peft>=0.21
+accelerate>=1
+datasets>=3

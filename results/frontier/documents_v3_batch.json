@@ -1,0 +1,33 @@
+{
+ "batch_id": "msgbatch_016Di5eZJ5Bkpo8anECLiVDE",
+ "model": "claude-opus-5-5",
+ "effort": "medium",
+ "split": "test",
+ "tasks": {
+  "r0000": "ca_build-d3-s1000000",
+  "r0001": "ca_build-d5-s1000000",
+  "r0002": "ca_repair-d3-s1000000",
+  "r0003": "ca_repair-d5-s1000000",
+  "r0004": "ca_free-d3-s1000000",
+  "r0005": "ca_free-d5-s1000000",
+  "r0006": "lpa_build-d3-s1000000",
+  "r0007": "lpa_build-d5-s1000000",
+  "r0008": "lpa_repair-d3-s1000000",
+  "r0009": "lpa_repair-d5-s1000000",
+  "r0010": "lpa_free-d3-s1000000",
+  "r0011": "lpa_free-d5-s1000000",
+  "r0012": "indenture_build-d3-s1000000",
+  "r0013": "indenture_build-d5-s1000000",
+  "r0014": "indenture_repair-d3-s1000000",
+  "r0015": "indenture_repair-d5-s1000000",
+  "r0016": "indenture_free-d3-s1000000",
+  "r0017": "indenture_free-d5-s1000000",
+  "r0018": "charter_build-d3-s1000000",
+  "r0019": "charter_build-d5-s1000000",
+  "r0020": "charter_repair-d3-s1000000",
+  "r0021": "charter_repair-d5-s1000000",
+  "r0022": "charter_free-d3-s1000000",
+  "r0023": "charter_free-d5-s1000000"
+ },
+ "submitted": 1792995078.5638223
+}

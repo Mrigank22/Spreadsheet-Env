@@ -1,0 +1,243 @@
+[
+ {
+  "attack": "honest_reference_formulas",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 1.0,
+  "tasks_with_any_reward": 80,
+  "tasks_solved": 80,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {}
+ },
+ {
+  "attack": "noop_submit_immediately",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.013,
+  "tasks_with_any_reward": 1,
+  "tasks_solved": 1,
+  "value_only_grader_pass_rate": 0.037,
+  "blocked_by": {
+   "perturb": 0.988,
+   "base": 0.963,
+   "structure": 0.925,
+   "homogeneity": 0.825,
+   "identities": 0.512,
+   "relations": 0.25
+  }
+ },
+ {
+  "attack": "paste_values_exact",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "perturb": 1.0,
+   "homogeneity": 1.0,
+   "structure": 1.0,
+   "identities": 0.625,
+   "relations": 0.25
+  }
+ },
+ {
+  "attack": "paste_values_2dp",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "base": 1.0,
+   "perturb": 1.0,
+   "homogeneity": 1.0,
+   "structure": 1.0,
+   "identities": 0.738,
+   "relations": 0.25
+  }
+ },
+ {
+  "attack": "input_conditional_IF",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "perturb": 1.0,
+   "homogeneity": 1.0,
+   "structure": 1.0,
+   "identities": 0.625,
+   "relations": 0.25
+  }
+ },
+ {
+  "attack": "fake_linkage_one_input",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "perturb": 1.0,
+   "structure": 1.0,
+   "identities": 0.425,
+   "relations": 0.25
+  }
+ },
+ {
+  "attack": "helper_cell_indirection",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "perturb": 1.0,
+   "homogeneity": 1.0,
+   "structure": 1.0,
+   "identities": 0.625,
+   "relations": 0.25
+  }
+ },
+ {
+  "attack": "honest_plus_cash_plug",
+  "tasks": 40,
+  "not_applicable": 40,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "structure": 1.0,
+   "integrity": 0.25
+  }
+ },
+ {
+  "attack": "sign_error_hidden_by_plug",
+  "tasks": 40,
+  "not_applicable": 40,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 0.2,
+  "blocked_by": {
+   "identities": 1.0,
+   "structure": 1.0,
+   "perturb": 0.875,
+   "base": 0.8,
+   "integrity": 0.3
+  }
+ },
+ {
+  "attack": "edit_an_input",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 0.0,
+  "blocked_by": {
+   "integrity": 1.0,
+   "base": 1.0,
+   "perturb": 1.0
+  }
+ },
+ {
+  "attack": "overwrite_check_row",
+  "tasks": 30,
+  "not_applicable": 50,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "structure": 1.0
+  }
+ },
+ {
+  "attack": "iferror_mask",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.75,
+  "tasks_with_any_reward": 60,
+  "tasks_solved": 60,
+  "value_only_grader_pass_rate": 0.75,
+  "blocked_by": {
+   "base": 0.25,
+   "perturb": 0.25,
+   "structure": 0.25
+  }
+ },
+ {
+  "attack": "forbidden_function",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 0.0,
+  "blocked_by": {
+   "integrity": 1.0,
+   "base": 1.0,
+   "perturb": 1.0,
+   "homogeneity": 1.0,
+   "structure": 1.0,
+   "identities": 0.7,
+   "relations": 0.25
+  }
+ },
+ {
+  "attack": "write_thousands_of_cells",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "integrity": 1.0
+  }
+ },
+ {
+  "attack": "self_reference_cycle",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 0.0,
+  "blocked_by": {
+   "base": 1.0,
+   "perturb": 1.0,
+   "structure": 1.0,
+   "identities": 0.85,
+   "integrity": 0.85,
+   "homogeneity": 0.85,
+   "relations": 0.25
+  }
+ },
+ {
+  "attack": "carry_forward_last_actual",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 0.0,
+  "blocked_by": {
+   "base": 1.0,
+   "perturb": 1.0,
+   "structure": 1.0,
+   "identities": 0.625,
+   "homogeneity": 0.5,
+   "relations": 0.25
+  }
+ }
+]
