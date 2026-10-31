@@ -1,0 +1,41 @@
+[
+ {
+  "attack": "type_scenario_constants",
+  "tasks": 12,
+  "not_applicable": 68,
+  "mean_reward_full_grader": 1.0,
+  "tasks_with_any_reward": 12,
+  "tasks_solved": 12,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {}
+ },
+ {
+  "attack": "jam_inputs_as_literals",
+  "tasks": 80,
+  "not_applicable": 0,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "perturb": 1.0,
+   "structure": 1.0,
+   "homogeneity": 0.963,
+   "identities": 0.8,
+   "relations": 0.25
+  }
+ },
+ {
+  "attack": "collapse_branches_to_base_arm",
+  "tasks": 56,
+  "not_applicable": 24,
+  "mean_reward_full_grader": 0.0,
+  "tasks_with_any_reward": 0,
+  "tasks_solved": 0,
+  "value_only_grader_pass_rate": 1.0,
+  "blocked_by": {
+   "perturb": 1.0,
+   "structure": 0.768
+  }
+ }
+]

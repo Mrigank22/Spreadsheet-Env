@@ -43,6 +43,8 @@ from ..engine.refs import ExcelError, addr
 from ..engine.workbook import CompiledWorkbook, Key, Workbook
 from ..task import Task
 
+N_HIDDEN = 160  # fresh scenarios faced by a submission every other oracle accepts (#26)
+N_CONSTANT = 600  # fresh reference scenarios a "structural constant" must survive (#27)
 ALL_ORACLES = ("integrity", "base", "perturb", "identities", "homogeneity", "structure", "relations")
 RTOL = 1e-6
 MAX_EXTRA_CELLS = 3000
@@ -107,6 +109,65 @@ class Grader:
         if len(self._ref_cache) > 256:
             self._ref_cache.pop(next(iter(self._ref_cache)))
         return runs
+
+    def _hidden_runs(self, task: Task, targets):
+        """Reference target values in N_HIDDEN fresh scenarios (same sampler, a seed of their own,
+        never shown and never used to choose anything). Scenarios where the reference is not well
+        defined are dropped. Cached per task: an RL run grades the same task many times."""
+        cached = self._ref_cache.get(("hidden", task.task_id))
+        if cached is not None and cached[0] is task:
+            return cached[1]
+        import random
+
+        from .scenarios import MAX_REFERENCE_ITERATIONS, _valid, sample_candidate
+
+        cw = task.reference.compile()
+        rng = random.Random(f"hidden:{task.task_id}")
+        modes = ("local", "wide", "single", "extreme")
+        runs = []
+        for i in range(N_HIDDEN):
+            sc = sample_candidate(task.inputs, task.fixups, rng, modes[i % 4])
+            rv = cw.run(sc)
+            if _valid(rv, targets) and getattr(cw, "iterations_used", 0) <= MAX_REFERENCE_ITERATIONS:
+                runs.append((sc, {k: rv.get(k) for k in targets}))
+        self._ref_cache[("hidden", task.task_id)] = (task, runs)
+        return runs
+
+    def _graded_constant(self, task: Task, k: Key) -> bool:
+        runs = self._reference_runs(task)
+        return all(close(r.get(k), runs[0].get(k), 1e-9) for r in runs)
+
+    def _constant_everywhere(self, task: Task, k: Key) -> bool:
+        """Is target ``k`` constant in N_CONSTANT fresh reference scenarios? The sample is drawn
+        once per task, for every target that is constant in the graded runs, and cached."""
+        cached = self._ref_cache.get(("constant", task.task_id))
+        if cached is None or cached[0] is not task:
+            import random
+
+            from .scenarios import MAX_REFERENCE_ITERATIONS, sample_candidate
+
+            runs = self._reference_runs(task)
+            cands = [t for t in task.target_keys if self._graded_constant(task, t)]
+            moved = set()
+            cw = task.reference.compile()
+            rng = random.Random(f"constant:{task.task_id}")
+            for i in range(N_CONSTANT if cands else 0):
+                rv = cw.run(sample_candidate(task.inputs, task.fixups, rng, ("local", "wide", "single", "extreme")[i % 4]))
+                if getattr(cw, "iterations_used", 0) > MAX_REFERENCE_ITERATIONS:
+                    continue
+                moved |= {t for t in cands if t not in moved and isinstance(rv.get(t), (int, float))
+                          and not close(rv.get(t), runs[0].get(t), 1e-9)}
+            cached = self._ref_cache[("constant", task.task_id)] = (task, frozenset(moved))
+        return k not in cached[1]
+
+    def _hidden_check(self, task: Task, cw: CompiledWorkbook, targets, cmp):
+        """Targets that differ from the reference in any hidden scenario."""
+        bad = set()
+        runs = self._hidden_runs(task, targets)
+        for sc, rv in runs:
+            sv = cw.run(sc)
+            bad |= {k for k in targets if k not in bad and not cmp(sv.get(k), rv[k])}
+        return sorted(bad), len(runs)
 
     def grade(self, task: Task, submission: Workbook) -> GradeResult:
         """Grade a submission. Never raises: anything the submission does that
@@ -203,6 +264,21 @@ class Grader:
             comps["structure"] = 0.0 if sp else 1.0
             diag["structure_problems"] = sp[:10]
 
+        # ---------------- hidden scenarios ------------------------------------
+        # The graded scenarios cover the *reference's* branch arms. A submission can add a branch
+        # of its own that none of them reaches (red team: IF(tax rate > 50%, 0, tax), where the
+        # only graded high-tax scenario had a pre-tax loss and the answer is 0 either way). So a
+        # submission every oracle accepts is also compared with the reference in N_HIDDEN fresh
+        # scenarios (HACK_LOG #26).
+        if "perturb" in self.oracles and all(v >= 1.0 - 1e-12 for v in comps.values()):
+            bad, n_hidden = self._hidden_check(task, cw, targets, cmp)
+            diag["hidden_scenarios"] = n_hidden
+            for k in bad:
+                robust_ok[k] = False
+                first_bad_scenario[k] = -1
+            if bad:
+                comps["perturb"] = sum(robust_ok.values()) / n
+
         # ---------------- static diagnostics -------------------------------
         hard = [label(k) for k in targets
                 if _is_formula_value(task.reference, k) and not _is_formula_value(submission, k)]
@@ -214,7 +290,8 @@ class Grader:
         for k in targets:
             if not robust_ok[k]:
                 i = first_bad_scenario.get(k, 0)
-                where = "base case" if i == 0 else f"scenario {i}"
+                where = "base case" if i == 0 else "a hidden scenario" \
+                    if i < 0 else f"scenario {i}"
                 failing.append(f"{label(k)} ({where})")
 
         # ---------------- verdict ---------------------------------------------
@@ -301,7 +378,12 @@ class Grader:
             # syntactic rule: that is what tells a computed balance check from a typed 0
             # (HACK_LOG #4).
             if missing and refine and k not in self._check_keys(task):
-                missing = {i for i in missing if self._sensitive(task, k, i)}
+                kept = {i for i in missing if self._sensitive(task, k, i)}
+                # a target that never moves in the graded runs may be left without its inputs only
+                # if it is constant across a much larger fresh sample too: a default flag that no
+                # graded scenario trips is not a structural zero (HACK_LOG #27)
+                if kept or not self._graded_constant(task, k) or self._constant_everywhere(task, k):
+                    missing = kept
             if missing:
                 disconnected.append((k, len(missing)))
         if disconnected:

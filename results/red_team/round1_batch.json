@@ -1,0 +1,17 @@
+{
+ "batch_id": "msgbatch_014xAFNiKVC9JgXASdcuczj1",
+ "tasks": {
+  "r00": "build-d3-s1000003",
+  "r01": "repair-d4-s1000003",
+  "r02": "build_free-d2-s1000003",
+  "r03": "dcf-d4-s1000003",
+  "r04": "lbo_build-d3-s1000003",
+  "r05": "abs_repair-d3-s1000003",
+  "r06": "waterfall_free-d2-s1000003",
+  "r07": "tax_build-d3-s1000003",
+  "r08": "ca_build-d2-s1000003",
+  "r09": "charter_free-d3-s1000003",
+  "r10": "lpa_repair-d3-s1000003",
+  "r11": "indenture_build-d2-s1000003"
+ }
+}

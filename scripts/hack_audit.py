@@ -197,6 +197,151 @@ def last_actual_carry_forward(s):
         _write(s, sheet, cell, f"={prev}")
 
 
+# ------------------------------------------------- white-box attacks on the grader's relaxations
+# HACK_LOG #19 (an input is required only if moving it alone moves the reference) and #24 (only
+# check rows keep the strict syntactic rule) loosened the structure oracle. These attacks aim at
+# exactly what was loosened.
+def _solution_keys(t):
+    return sorted(set(t.target_keys) | {k for k in t.reference.snapshot() if t.initial.raw(k) is None})
+
+
+def _formula_keys(t):
+    return [k for k in _solution_keys(t) if isinstance(t.reference.raw(k), str) and t.reference.raw(k).startswith("=")]
+
+
+def _is_num(v):
+    return isinstance(v, (int, float)) and not isinstance(v, bool)
+
+
+def scenario_constant_cells(t):
+    """Formula cells (not check rows) whose reference value is identical at the base inputs and
+    in every graded scenario: the cells a constant could replace without any oracle noticing."""
+    from spreadsheet_env.engine.parser import Ref, parse_formula, walk
+
+    checks = Grader()._check_keys(t)
+    runs = [t.reference.calculate()] + [t.reference.calculate(overrides=sc) for sc in t.scenarios]
+    out = []
+    for k in _formula_keys(t):
+        if k in checks:
+            continue
+        vals = [r.get(k) for r in runs]
+        if not all(_is_num(v) or isinstance(v, bool) for v in vals) or any(v != vals[0] for v in vals):
+            continue
+        if not any(isinstance(n, Ref) for n in walk(parse_formula(t.reference.raw(k)))):
+            continue  # a literal-only formula is a given constant, not logic
+        out.append((k, vals[0]))
+    return out
+
+
+def type_scenario_constants(s):
+    """Honest model, but every cell whose value never moves in the graded scenarios (a default
+    flag that never trips, a sweep that is always zero) typed as that constant."""
+    t = s.task
+    _ref_formula_solution(s)
+    cells = scenario_constant_cells(t)
+    if not cells:
+        raise NotApplicable()
+    for k, v in cells:
+        _write(s, t.reference.sheet_name(k[0]), addr(k[1], k[2]), "TRUE" if v is True else
+               "FALSE" if v is False else repr(float(v)))
+
+
+def _rewrite_solution(s, fn):
+    """Write fn(home_sheet, key, ast) for every formula cell of the honest solution."""
+    from spreadsheet_env.engine.parser import parse_formula, to_formula
+
+    t = s.task
+    _ref_formula_solution(s)
+    changed = 0
+    for k in _formula_keys(t):
+        raw = t.reference.raw(k)
+        new = fn(t.reference.sheet_name(k[0]), k, parse_formula(raw))
+        if new is not None and to_formula(new) != raw:
+            _write(s, t.reference.sheet_name(k[0]), addr(k[1], k[2]), to_formula(new))
+            changed += 1
+    if not changed:
+        raise NotApplicable()
+
+
+def jam_inputs_as_literals(s):
+    """Honest formulas with every reference to a perturbed input replaced by its current value
+    (the formula reads right today and ignores the assumptions)."""
+    from spreadsheet_env.engine.parser import Num, Ref, Unary, map_refs
+
+    t = s.task
+    base = {i.key: i.base for i in t.inputs if i.kind not in ("fixed", "money_fixed")}
+
+    def fn(home, k, ast):
+        def sub(n):
+            if isinstance(n, Ref):
+                key = ((n.ref.sheet or home).casefold(), n.ref.row, n.ref.col)
+                if key in base:
+                    v = float(base[key])
+                    return Unary("-", Num(-v)) if v < 0 else Num(v)
+            return n
+        return map_refs(ast, sub)
+
+    _rewrite_solution(s, fn)
+
+
+def collapse_branches_to_base_arm(s):
+    """Honest formulas with every IF / two-argument MIN / MAX replaced by the arm it takes at the
+    base inputs: the model is right today, but its guards, caps, floors and triggers are gone."""
+    from spreadsheet_env.engine.parser import Binary, Call, Percent, Unary, parse_formula, to_formula, walk, with_sheet
+
+    t = s.task
+    probe = t.reference.copy()
+    probe.add_sheet("Probe")
+    slots, row = {}, 1
+    trees = {k: parse_formula(t.reference.raw(k)) for k in _formula_keys(t)}  # ids below refer to these
+    for k, tree in trees.items():
+        home = t.reference.sheet_name(k[0])
+        for n in walk(tree):
+            if isinstance(n, Call) and ((n.name in ("MIN", "MAX") and len(n.args) == 2) or
+                                        (n.name == "IF" and len(n.args) == 3)):
+                parts = n.args[:2] if n.name != "IF" else n.args[:1]
+                cells = []
+                for a in parts:
+                    probe.set("Probe", f"A{row}", to_formula(with_sheet(a, home)))
+                    cells.append(("probe", row, 1))
+                    row += 1
+                slots[(k, id(n))] = cells
+    if not slots:
+        raise NotApplicable()
+    vals = probe.calculate()
+
+    def collapse(k, ast):
+        def go(n):
+            if isinstance(n, Call):
+                cells = slots.get((k, id(n)))
+                if cells:
+                    v = [vals.get(c) for c in cells]
+                    if n.name == "IF" and (_is_num(v[0]) or isinstance(v[0], bool)):
+                        return go(n.args[1] if v[0] else n.args[2])
+                    if n.name in ("MIN", "MAX") and all(_is_num(x) for x in v):
+                        pick = (v[0] <= v[1]) if n.name == "MIN" else (v[0] >= v[1])
+                        return go(n.args[0] if pick else n.args[1])
+                return Call(n.name, tuple(go(a) for a in n.args))
+            if isinstance(n, Unary):
+                return Unary(n.op, go(n.operand))
+            if isinstance(n, Percent):
+                return Percent(go(n.operand))
+            if isinstance(n, Binary):
+                return Binary(n.op, go(n.left), go(n.right))
+            return n
+        return go(ast)
+
+    _ref_formula_solution(s)
+    changed = 0
+    for k, tree in trees.items():
+        new = to_formula(collapse(k, tree))
+        if new != t.reference.raw(k):
+            _write(s, t.reference.sheet_name(k[0]), addr(k[1], k[2]), new)
+            changed += 1
+    if not changed:
+        raise NotApplicable()
+
+
 ATTACKS = {
     "honest_reference_formulas": _ref_formula_solution,
     "noop_submit_immediately": noop,
@@ -214,17 +359,22 @@ ATTACKS = {
     "write_thousands_of_cells": huge_write,
     "self_reference_cycle": self_reference,
     "carry_forward_last_actual": last_actual_carry_forward,
+    "type_scenario_constants": type_scenario_constants,
+    "jam_inputs_as_literals": jam_inputs_as_literals,
+    "collapse_branches_to_base_arm": collapse_branches_to_base_arm,
 }
 
 EXPECTED_REWARD = {"honest_reference_formulas": 1.0, "honest_plus_cash_plug": None}
 
 
-def audit_task(tid):
-    """Run every attack against one task; runs in a worker process."""
+def audit_task(tid, names=None):
+    """Run every attack (or the named ones) against one task; runs in a worker process."""
     grader = Grader()
     task = make_task(tid)
     agg = defaultdict(lambda: defaultdict(int))
     for name, attack in ATTACKS.items():
+        if names and name not in names:
+            continue
         s = Session(task, grader, max_steps=100_000)
         try:
             attack(s)
@@ -248,8 +398,9 @@ def audit_task(tid):
     return {name: dict(a) for name, a in agg.items()}
 
 
-def audit_task_logged(tid):
-    return tid, audit_task(tid)
+def audit_task_logged(job):
+    tid, names = job
+    return tid, audit_task(tid, names)
 
 
 def main():
@@ -260,12 +411,17 @@ def main():
     ap.add_argument("--families", default="core",
                     help="'core' (the original families), 'frontier' (every frontier family) or a comma list")
     ap.add_argument("--levels", default="5,4,3,2,1")
+    ap.add_argument("--attacks", default="", help="comma list of attack names (default: all)")
     args = ap.parse_args()
+    names = tuple(a for a in args.attacks.split(",") if a)
     if args.families == "core":
         fams = ("build", "repair", "dcf", "build_free")
     elif args.families == "frontier":
         from spreadsheet_env.frontier import all_families
         fams = tuple(all_families())
+    elif args.families == "documents":
+        from spreadsheet_env.frontier import document_families
+        fams = tuple(document_families())
     else:
         fams = tuple(args.families.split(","))
     levels = [int(x) for x in args.levels.split(",")]
@@ -283,7 +439,7 @@ def main():
     todo = [t for t in task_ids if t not in done]
     print(f"{len(done)} tasks already in {ckpt}; {len(todo)} to run", flush=True)
     with open(ckpt, "a", encoding="utf-8") as f:
-        for _, (tid, part) in pmap(audit_task_logged, todo, args.workers, progress="hack-audit"):
+        for _, (tid, part) in pmap(audit_task_logged, [(t, names) for t in todo], args.workers, progress="hack-audit"):
             f.write(json.dumps({"task_id": tid, "result": part}) + "\n")
             f.flush()
             done[tid] = part

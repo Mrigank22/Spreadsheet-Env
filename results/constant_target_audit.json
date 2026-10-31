@@ -1,0 +1,3046 @@
+{
+ "summary": {
+  "tasks": 430,
+  "targets": 143350,
+  "typable": 1958,
+  "holes": 14,
+  "tasks_with_holes": 10,
+  "fresh_scenarios_per_task": 60
+ },
+ "tasks": [
+  {
+   "task_id": "abs_build-d1-s0",
+   "targets": 410,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_build-d1-s1",
+   "targets": 410,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_build-d2-s0",
+   "targets": 724,
+   "typable": 16,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_build-d2-s1",
+   "targets": 724,
+   "typable": 12,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_build-d3-s0",
+   "targets": 1156,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_build-d3-s1",
+   "targets": 1156,
+   "typable": 8,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_build-d4-s0",
+   "targets": 1804,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_build-d4-s1",
+   "targets": 1804,
+   "typable": 12,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_build-d5-s0",
+   "targets": 2285,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_build-d5-s1",
+   "targets": 2285,
+   "typable": 12,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d1-s0",
+   "targets": 145,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d1-s1",
+   "targets": 145,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d2-s0",
+   "targets": 217,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d2-s1",
+   "targets": 217,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d3-s0",
+   "targets": 289,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d3-s1",
+   "targets": 289,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d4-s0",
+   "targets": 421,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d4-s1",
+   "targets": 421,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d5-s0",
+   "targets": 662,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_free-d5-s1",
+   "targets": 662,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d1-s0",
+   "targets": 410,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d1-s1",
+   "targets": 410,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d2-s0",
+   "targets": 724,
+   "typable": 16,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d2-s1",
+   "targets": 724,
+   "typable": 12,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d3-s0",
+   "targets": 1156,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d3-s1",
+   "targets": 1156,
+   "typable": 8,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d4-s0",
+   "targets": 1804,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d4-s1",
+   "targets": 1804,
+   "typable": 12,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d5-s0",
+   "targets": 2285,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "abs_repair-d5-s1",
+   "targets": 2285,
+   "typable": 12,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d1-s0",
+   "targets": 9,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d1-s1",
+   "targets": 9,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d2-s0",
+   "targets": 16,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d2-s1",
+   "targets": 16,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d3-s0",
+   "targets": 75,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d3-s1",
+   "targets": 75,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d4-s0",
+   "targets": 215,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d4-s1",
+   "targets": 215,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d5-s0",
+   "targets": 258,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build-d5-s1",
+   "targets": 258,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d1-s0",
+   "targets": 12,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d1-s1",
+   "targets": 12,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d2-s0",
+   "targets": 48,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d2-s1",
+   "targets": 48,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d3-s0",
+   "targets": 65,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d3-s1",
+   "targets": 65,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d4-s0",
+   "targets": 65,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d4-s1",
+   "targets": 65,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d5-s0",
+   "targets": 78,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "build_free-d5-s1",
+   "targets": 78,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d1-s0",
+   "targets": 90,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d1-s1",
+   "targets": 90,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d2-s0",
+   "targets": 120,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d2-s1",
+   "targets": 120,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d3-s0",
+   "targets": 224,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d3-s1",
+   "targets": 224,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d4-s0",
+   "targets": 252,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d4-s1",
+   "targets": 252,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d5-s0",
+   "targets": 281,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_build-d5-s1",
+   "targets": 281,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d1-s0",
+   "targets": 48,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d1-s1",
+   "targets": 48,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d2-s0",
+   "targets": 60,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d2-s1",
+   "targets": 60,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d3-s0",
+   "targets": 91,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d3-s1",
+   "targets": 91,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d4-s0",
+   "targets": 108,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d4-s1",
+   "targets": 108,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d5-s0",
+   "targets": 116,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_free-d5-s1",
+   "targets": 116,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d1-s0",
+   "targets": 92,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d1-s1",
+   "targets": 92,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d2-s0",
+   "targets": 122,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d2-s1",
+   "targets": 122,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d3-s0",
+   "targets": 227,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d3-s1",
+   "targets": 227,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d4-s0",
+   "targets": 256,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d4-s1",
+   "targets": 256,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d5-s0",
+   "targets": 286,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "ca_repair-d5-s1",
+   "targets": 286,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d1-s0",
+   "targets": 110,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d1-s1",
+   "targets": 110,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d2-s0",
+   "targets": 189,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d2-s1",
+   "targets": 189,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d3-s0",
+   "targets": 189,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d3-s1",
+   "targets": 189,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d4-s0",
+   "targets": 283,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d4-s1",
+   "targets": 283,
+   "typable": 6,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d5-s0",
+   "targets": 344,
+   "typable": 7,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_build-d5-s1",
+   "targets": 344,
+   "typable": 12,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_free-d1-s0",
+   "targets": 50,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_free-d1-s1",
+   "targets": 50,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_free-d2-s0",
+   "targets": 83,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_free-d2-s1",
+   "targets": 83,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_free-d3-s0",
+   "targets": 83,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_free-d3-s1",
+   "targets": 83,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_free-d4-s0",
+   "targets": 124,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_free-d4-s1",
+   "targets": 124,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_free-d5-s0",
+   "targets": 136,
+   "typable": 5,
+   "holes": 1,
+   "hole_labels": [
+    "('outputs', 12, 5)"
+   ]
+  },
+  {
+   "task_id": "charter_free-d5-s1",
+   "targets": 136,
+   "typable": 8,
+   "holes": 2,
+   "hole_labels": [
+    "('outputs', 10, 5)",
+    "('outputs', 12, 6)"
+   ]
+  },
+  {
+   "task_id": "charter_repair-d1-s0",
+   "targets": 110,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_repair-d1-s1",
+   "targets": 110,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_repair-d2-s0",
+   "targets": 189,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_repair-d2-s1",
+   "targets": 189,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_repair-d3-s0",
+   "targets": 189,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_repair-d3-s1",
+   "targets": 189,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_repair-d4-s0",
+   "targets": 283,
+   "typable": 5,
+   "holes": 1,
+   "hole_labels": [
+    "Model!E12 (Series B converts (1/0) Exit 2)"
+   ]
+  },
+  {
+   "task_id": "charter_repair-d4-s1",
+   "targets": 283,
+   "typable": 6,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_repair-d5-s0",
+   "targets": 344,
+   "typable": 7,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "charter_repair-d5-s1",
+   "targets": 344,
+   "typable": 12,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d1-s0",
+   "targets": 158,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d1-s1",
+   "targets": 158,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d2-s0",
+   "targets": 195,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d2-s1",
+   "targets": 195,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d3-s0",
+   "targets": 417,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d3-s1",
+   "targets": 417,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d4-s0",
+   "targets": 675,
+   "typable": 10,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d4-s1",
+   "targets": 675,
+   "typable": 3,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d5-s0",
+   "targets": 987,
+   "typable": 30,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_build-d5-s1",
+   "targets": 987,
+   "typable": 9,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d1-s0",
+   "targets": 73,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d1-s1",
+   "targets": 73,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d2-s0",
+   "targets": 97,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d2-s1",
+   "targets": 97,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d3-s0",
+   "targets": 163,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d3-s1",
+   "targets": 163,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d4-s0",
+   "targets": 313,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d4-s1",
+   "targets": 313,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d5-s0",
+   "targets": 361,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_free-d5-s1",
+   "targets": 361,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d1-s0",
+   "targets": 159,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d1-s1",
+   "targets": 159,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d2-s0",
+   "targets": 198,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d2-s1",
+   "targets": 198,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d3-s0",
+   "targets": 418,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d3-s1",
+   "targets": 418,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d4-s0",
+   "targets": 679,
+   "typable": 10,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d4-s1",
+   "targets": 679,
+   "typable": 3,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d5-s0",
+   "targets": 991,
+   "typable": 30,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "credit_repair-d5-s1",
+   "targets": 991,
+   "typable": 9,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d1-s0",
+   "targets": 16,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d1-s1",
+   "targets": 16,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d2-s0",
+   "targets": 71,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d2-s1",
+   "targets": 71,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d3-s0",
+   "targets": 25,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d3-s1",
+   "targets": 25,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d4-s0",
+   "targets": 109,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d4-s1",
+   "targets": 109,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d5-s0",
+   "targets": 129,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "dcf-d5-s1",
+   "targets": 129,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d1-s0",
+   "targets": 50,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d1-s1",
+   "targets": 50,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d2-s0",
+   "targets": 87,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d2-s1",
+   "targets": 87,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d3-s0",
+   "targets": 113,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d3-s1",
+   "targets": 113,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d4-s0",
+   "targets": 128,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d4-s1",
+   "targets": 128,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d5-s0",
+   "targets": 165,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_build-d5-s1",
+   "targets": 165,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d1-s0",
+   "targets": 17,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d1-s1",
+   "targets": 17,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d2-s0",
+   "targets": 46,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d2-s1",
+   "targets": 46,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d3-s0",
+   "targets": 61,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d3-s1",
+   "targets": 61,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d4-s0",
+   "targets": 66,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d4-s1",
+   "targets": 66,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d5-s0",
+   "targets": 85,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_free-d5-s1",
+   "targets": 85,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d1-s0",
+   "targets": 58,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d1-s1",
+   "targets": 58,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d2-s0",
+   "targets": 95,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d2-s1",
+   "targets": 95,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d3-s0",
+   "targets": 126,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d3-s1",
+   "targets": 126,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d4-s0",
+   "targets": 143,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d4-s1",
+   "targets": 143,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d5-s0",
+   "targets": 181,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "fx_repair-d5-s1",
+   "targets": 181,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d1-s0",
+   "targets": 602,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d1-s1",
+   "targets": 602,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d2-s0",
+   "targets": 1155,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d2-s1",
+   "targets": 1155,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d3-s0",
+   "targets": 1827,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d3-s1",
+   "targets": 1827,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d4-s0",
+   "targets": 2583,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d4-s1",
+   "targets": 2583,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d5-s0",
+   "targets": 2763,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_build-d5-s1",
+   "targets": 2763,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d1-s0",
+   "targets": 192,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d1-s1",
+   "targets": 192,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d2-s0",
+   "targets": 360,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d2-s1",
+   "targets": 360,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d3-s0",
+   "targets": 528,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d3-s1",
+   "targets": 528,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d4-s0",
+   "targets": 720,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d4-s1",
+   "targets": 720,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d5-s0",
+   "targets": 781,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_free-d5-s1",
+   "targets": 781,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d1-s0",
+   "targets": 604,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d1-s1",
+   "targets": 604,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d2-s0",
+   "targets": 1158,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d2-s1",
+   "targets": 1158,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d3-s0",
+   "targets": 1831,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d3-s1",
+   "targets": 1831,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d4-s0",
+   "targets": 2587,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d4-s1",
+   "targets": 2587,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d5-s0",
+   "targets": 2767,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "indenture_repair-d5-s1",
+   "targets": 2767,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d1-s0",
+   "targets": 95,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d1-s1",
+   "targets": 95,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d2-s0",
+   "targets": 110,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d2-s1",
+   "targets": 110,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d3-s0",
+   "targets": 178,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d3-s1",
+   "targets": 178,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d4-s0",
+   "targets": 241,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d4-s1",
+   "targets": 241,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d5-s0",
+   "targets": 277,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_build-d5-s1",
+   "targets": 277,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d1-s0",
+   "targets": 34,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d1-s1",
+   "targets": 34,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d2-s0",
+   "targets": 39,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d2-s1",
+   "targets": 39,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d3-s0",
+   "targets": 52,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d3-s1",
+   "targets": 52,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d4-s0",
+   "targets": 74,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d4-s1",
+   "targets": 74,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d5-s0",
+   "targets": 88,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_free-d5-s1",
+   "targets": 88,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d1-s0",
+   "targets": 98,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d1-s1",
+   "targets": 98,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d2-s0",
+   "targets": 114,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d2-s1",
+   "targets": 114,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d3-s0",
+   "targets": 182,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d3-s1",
+   "targets": 182,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d4-s0",
+   "targets": 246,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d4-s1",
+   "targets": 246,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d5-s0",
+   "targets": 284,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lbo_repair-d5-s1",
+   "targets": 284,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d1-s0",
+   "targets": 134,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d1-s1",
+   "targets": 134,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d2-s0",
+   "targets": 164,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d2-s1",
+   "targets": 164,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d3-s0",
+   "targets": 224,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d3-s1",
+   "targets": 224,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d4-s0",
+   "targets": 270,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d4-s1",
+   "targets": 270,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d5-s0",
+   "targets": 309,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_build-d5-s1",
+   "targets": 309,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_free-d1-s0",
+   "targets": 62,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_free-d1-s1",
+   "targets": 62,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_free-d2-s0",
+   "targets": 72,
+   "typable": 1,
+   "holes": 1,
+   "hole_labels": [
+    "('outputs', 8, 6)"
+   ]
+  },
+  {
+   "task_id": "lpa_free-d2-s1",
+   "targets": 72,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_free-d3-s0",
+   "targets": 72,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_free-d3-s1",
+   "targets": 72,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_free-d4-s0",
+   "targets": 87,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_free-d4-s1",
+   "targets": 87,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_free-d5-s0",
+   "targets": 100,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_free-d5-s1",
+   "targets": 100,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_repair-d1-s0",
+   "targets": 134,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_repair-d1-s1",
+   "targets": 134,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_repair-d2-s0",
+   "targets": 164,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_repair-d2-s1",
+   "targets": 164,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_repair-d3-s0",
+   "targets": 224,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_repair-d3-s1",
+   "targets": 224,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_repair-d4-s0",
+   "targets": 270,
+   "typable": 2,
+   "holes": 1,
+   "hole_labels": [
+    "Model!E25 (Distributions under clause (c) (catch-up), total FY2)"
+   ]
+  },
+  {
+   "task_id": "lpa_repair-d4-s1",
+   "targets": 270,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_repair-d5-s0",
+   "targets": 309,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "lpa_repair-d5-s1",
+   "targets": 309,
+   "typable": 1,
+   "holes": 1,
+   "hole_labels": [
+    "Model!E25 (Distributions under clause (c) (catch-up), total FY2)"
+   ]
+  },
+  {
+   "task_id": "pf_build-d1-s0",
+   "targets": 325,
+   "typable": 21,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_build-d1-s1",
+   "targets": 325,
+   "typable": 23,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_build-d2-s0",
+   "targets": 505,
+   "typable": 59,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_build-d2-s1",
+   "targets": 505,
+   "typable": 57,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_build-d3-s0",
+   "targets": 565,
+   "typable": 59,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_build-d3-s1",
+   "targets": 565,
+   "typable": 60,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_build-d4-s0",
+   "targets": 643,
+   "typable": 75,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_build-d4-s1",
+   "targets": 643,
+   "typable": 72,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_build-d5-s0",
+   "targets": 885,
+   "typable": 88,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_build-d5-s1",
+   "targets": 885,
+   "typable": 90,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d1-s0",
+   "targets": 99,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d1-s1",
+   "targets": 99,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d2-s0",
+   "targets": 123,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d2-s1",
+   "targets": 123,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d3-s0",
+   "targets": 143,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d3-s1",
+   "targets": 143,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d4-s0",
+   "targets": 157,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d4-s1",
+   "targets": 157,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d5-s0",
+   "targets": 201,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_free-d5-s1",
+   "targets": 201,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d1-s0",
+   "targets": 326,
+   "typable": 21,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d1-s1",
+   "targets": 326,
+   "typable": 23,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d2-s0",
+   "targets": 506,
+   "typable": 59,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d2-s1",
+   "targets": 506,
+   "typable": 57,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d3-s0",
+   "targets": 566,
+   "typable": 59,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d3-s1",
+   "targets": 566,
+   "typable": 60,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d4-s0",
+   "targets": 644,
+   "typable": 75,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d4-s1",
+   "targets": 644,
+   "typable": 72,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d5-s0",
+   "targets": 886,
+   "typable": 88,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "pf_repair-d5-s1",
+   "targets": 886,
+   "typable": 90,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d1-s0",
+   "targets": 130,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d1-s1",
+   "targets": 130,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d2-s0",
+   "targets": 178,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d2-s1",
+   "targets": 178,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d3-s0",
+   "targets": 232,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d3-s1",
+   "targets": 232,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d4-s0",
+   "targets": 237,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d4-s1",
+   "targets": 237,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d5-s0",
+   "targets": 280,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "repair-d5-s1",
+   "targets": 280,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d1-s0",
+   "targets": 170,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d1-s1",
+   "targets": 170,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d2-s0",
+   "targets": 242,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d2-s1",
+   "targets": 242,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d3-s0",
+   "targets": 398,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d3-s1",
+   "targets": 398,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d4-s0",
+   "targets": 470,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d4-s1",
+   "targets": 470,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d5-s0",
+   "targets": 578,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_build-d5-s1",
+   "targets": 578,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d1-s0",
+   "targets": 98,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d1-s1",
+   "targets": 98,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d2-s0",
+   "targets": 146,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d2-s1",
+   "targets": 146,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d3-s0",
+   "targets": 254,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d3-s1",
+   "targets": 254,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d4-s0",
+   "targets": 290,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d4-s1",
+   "targets": 290,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d5-s0",
+   "targets": 362,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_free-d5-s1",
+   "targets": 362,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d1-s0",
+   "targets": 170,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d1-s1",
+   "targets": 170,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d2-s0",
+   "targets": 242,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d2-s1",
+   "targets": 242,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d3-s0",
+   "targets": 398,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d3-s1",
+   "targets": 398,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d4-s0",
+   "targets": 470,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d4-s1",
+   "targets": 470,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d5-s0",
+   "targets": 578,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "saas_repair-d5-s1",
+   "targets": 578,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d1-s0",
+   "targets": 94,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d1-s1",
+   "targets": 94,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d2-s0",
+   "targets": 106,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d2-s1",
+   "targets": 106,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d3-s0",
+   "targets": 144,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d3-s1",
+   "targets": 144,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d4-s0",
+   "targets": 186,
+   "typable": 19,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d4-s1",
+   "targets": 186,
+   "typable": 13,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d5-s0",
+   "targets": 244,
+   "typable": 17,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_build-d5-s1",
+   "targets": 244,
+   "typable": 18,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d1-s0",
+   "targets": 50,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d1-s1",
+   "targets": 50,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d2-s0",
+   "targets": 50,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d2-s1",
+   "targets": 50,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d3-s0",
+   "targets": 72,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d3-s1",
+   "targets": 72,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d4-s0",
+   "targets": 86,
+   "typable": 10,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d4-s1",
+   "targets": 86,
+   "typable": 6,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d5-s0",
+   "targets": 114,
+   "typable": 7,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_free-d5-s1",
+   "targets": 114,
+   "typable": 9,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d1-s0",
+   "targets": 96,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d1-s1",
+   "targets": 96,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d2-s0",
+   "targets": 109,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d2-s1",
+   "targets": 109,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d3-s0",
+   "targets": 147,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d3-s1",
+   "targets": 147,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d4-s0",
+   "targets": 189,
+   "typable": 19,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d4-s1",
+   "targets": 189,
+   "typable": 13,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d5-s0",
+   "targets": 248,
+   "typable": 17,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "tax_repair-d5-s1",
+   "targets": 248,
+   "typable": 18,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_build-d1-s0",
+   "targets": 75,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_build-d1-s1",
+   "targets": 75,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_build-d2-s0",
+   "targets": 136,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_build-d2-s1",
+   "targets": 136,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_build-d3-s0",
+   "targets": 213,
+   "typable": 7,
+   "holes": 1,
+   "hole_labels": [
+    "Model!N15 (Seed preference paid Exit 11)"
+   ]
+  },
+  {
+   "task_id": "vc_build-d3-s1",
+   "targets": 213,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_build-d4-s0",
+   "targets": 240,
+   "typable": 6,
+   "holes": 4,
+   "hole_labels": [
+    "Model!D5 (Test 1: common price if Seed convert Exit 1)",
+    "Model!D6 (Seed converts (1/0) Exit 1)",
+    "Model!D7 (Test 2: common price if Seed, Series A convert Exit 1)",
+    "Model!D8 (Series A converts (1/0) Exit 1)"
+   ]
+  },
+  {
+   "task_id": "vc_build-d4-s1",
+   "targets": 240,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_build-d5-s0",
+   "targets": 276,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_build-d5-s1",
+   "targets": 276,
+   "typable": 8,
+   "holes": 1,
+   "hole_labels": [
+    "Model!H10 (Series B converts (1/0) Exit 5)"
+   ]
+  },
+  {
+   "task_id": "vc_free-d1-s0",
+   "targets": 33,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_free-d1-s1",
+   "targets": 33,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_free-d2-s0",
+   "targets": 62,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_free-d2-s1",
+   "targets": 62,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_free-d3-s0",
+   "targets": 99,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_free-d3-s1",
+   "targets": 99,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_free-d4-s0",
+   "targets": 112,
+   "typable": 4,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_free-d4-s1",
+   "targets": 112,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_free-d5-s0",
+   "targets": 112,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_free-d5-s1",
+   "targets": 112,
+   "typable": 7,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d1-s0",
+   "targets": 75,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d1-s1",
+   "targets": 75,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d2-s0",
+   "targets": 136,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d2-s1",
+   "targets": 136,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d3-s0",
+   "targets": 213,
+   "typable": 7,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d3-s1",
+   "targets": 213,
+   "typable": 5,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d4-s0",
+   "targets": 240,
+   "typable": 6,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d4-s1",
+   "targets": 240,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d5-s0",
+   "targets": 276,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "vc_repair-d5-s1",
+   "targets": 276,
+   "typable": 8,
+   "holes": 1,
+   "hole_labels": [
+    "Model!N16 (Seed preference paid Exit 11)"
+   ]
+  },
+  {
+   "task_id": "waterfall_build-d1-s0",
+   "targets": 101,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_build-d1-s1",
+   "targets": 101,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_build-d2-s0",
+   "targets": 117,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_build-d2-s1",
+   "targets": 117,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_build-d3-s0",
+   "targets": 145,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_build-d3-s1",
+   "targets": 145,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_build-d4-s0",
+   "targets": 173,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_build-d4-s1",
+   "targets": 173,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_build-d5-s0",
+   "targets": 199,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_build-d5-s1",
+   "targets": 199,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d1-s0",
+   "targets": 34,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d1-s1",
+   "targets": 34,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d2-s0",
+   "targets": 42,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d2-s1",
+   "targets": 42,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d3-s0",
+   "targets": 52,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d3-s1",
+   "targets": 52,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d4-s0",
+   "targets": 52,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d4-s1",
+   "targets": 52,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d5-s0",
+   "targets": 63,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_free-d5-s1",
+   "targets": 63,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d1-s0",
+   "targets": 101,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d1-s1",
+   "targets": 101,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d2-s0",
+   "targets": 117,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d2-s1",
+   "targets": 117,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d3-s0",
+   "targets": 145,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d3-s1",
+   "targets": 145,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d4-s0",
+   "targets": 173,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d4-s1",
+   "targets": 173,
+   "typable": 0,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d5-s0",
+   "targets": 199,
+   "typable": 1,
+   "holes": 0,
+   "hole_labels": []
+  },
+  {
+   "task_id": "waterfall_repair-d5-s1",
+   "targets": 199,
+   "typable": 2,
+   "holes": 0,
+   "hole_labels": []
+  }
+ ]
+}

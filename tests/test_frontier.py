@@ -156,3 +156,22 @@ def test_structural_zero_openings_are_never_perturbed():
     lay = t.meta["layout"]
     key = lay.key("rev_close", 0)
     assert all(sc.get(key, 0.0) == 0.0 for sc in t.scenarios)
+
+
+def test_branch_only_in_the_submission_faces_hidden_scenarios():
+    # Red-team round 2 (HACK_LOG #26): an extra arm IF(tax rate > 50%, 0, ...) that the
+    # reference does not have. The graded scenarios reach both arms, but their only high-tax
+    # scenario has a pre-tax loss, where the answer is 0 either way.
+    t = make_task("build_free-d2-s1000003")
+    sub = reference_submission(t)
+    assert G.grade(t, sub).solved
+    tax = next(i for i in t.inputs if i.kind == "tax")
+    ref_tax = f"Assumptions!${addr(tax.key[1], tax.key[2])[0]}${tax.key[1]}"
+    cells = [(sh, r, c, raw) for sh, r, c, raw in t.reference.cells()
+             if isinstance(raw, str) and raw.startswith("=MAX(0,") and ref_tax in raw]
+    assert cells
+    for sh, r, c, raw in cells:
+        sub.set_rc(sh, r, c, f"=IF({ref_tax}>0.5,0,{raw[1:]})")
+    res = G.grade(t, sub)
+    assert not res.solved and res.components["perturb"] < 1.0
+    assert res.diagnostics["hidden_scenarios"] > 100
