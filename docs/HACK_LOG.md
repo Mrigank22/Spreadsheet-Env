@@ -51,13 +51,19 @@ Three scripted attacks aimed at what #19 and #24 loosened (`scripts/hack_audit.p
 
 Results:
 
-| Attack | Core (80 tasks) | Frontier (first 52 of 162 tasks) |
+| Attack | Core (80 tasks) | Frontier + document tiers (234 tasks) |
 |---|---|---|
-| `type_scenario_constants` | 1.000 on the 12 applicable tasks: every cell typed there is constant across 60 fresh scenarios as well (a genuine structural zero, accepted by design) | 0 / 34 |
-| `jam_inputs_as_literals` | 0 / 80 | 0 / 52 |
-| `collapse_branches_to_base_arm` | 0 / 56 | 0 / 52 |
+| `type_scenario_constants` | 1.000 on the 12 applicable tasks | 9 of 171 applicable tasks rewarded |
+| `jam_inputs_as_literals` | 0 / 80 | 0 / 234 |
+| `collapse_branches_to_base_arm` | 0 / 56 | 0 / 204 |
 
-The frontier run was stopped at 52 of 162 tasks by a low-memory guard; the document tier was not run. A stricter grader can only lower these numbers.
+Why the rewarded `type_scenario_constants` cases are not exploits:
+
+- **Core (12 tasks).** Every typed cell stays constant in 60 fresh scenarios as well: these are genuine structural zeros, accepted by design.
+- **Frontier and documents, 8 of the 9 tasks.** The typed cells never move in 2,000 fresh scenarios. Examples are the credit agreement's first-year ECF sweep (zero by contract) and the SaaS opening balances.
+- **The ninth task (`vc_repair-d1-s1`).** A conversion flag that moves in 1 of 2,000 scenarios (0.05%). It falls inside the residual bound of #27.
+
+**Run note.** The frontier and document run first stalled on the 60-month ABS models. The structure oracle's sensitivity test (#19) ran the model once per (target, input) pair. It now runs once per input and records every target that moves: same verdicts, 43 s instead of over 10 minutes for all 19 attacks on the largest task. This speed-up matters for RL training too.
 
 ## Adaptive red-team (2026-10-31)
 

@@ -411,6 +411,7 @@ def main():
     ap.add_argument("--families", default="core",
                     help="'core' (the original families), 'frontier' (every frontier family) or a comma list")
     ap.add_argument("--levels", default="5,4,3,2,1")
+    ap.add_argument("--limit", type=int, default=0, help="run at most this many pending tasks, then stop")
     ap.add_argument("--attacks", default="", help="comma list of attack names (default: all)")
     args = ap.parse_args()
     names = tuple(a for a in args.attacks.split(",") if a)
@@ -438,11 +439,17 @@ def main():
             done[r["task_id"]] = r["result"]
     todo = [t for t in task_ids if t not in done]
     print(f"{len(done)} tasks already in {ckpt}; {len(todo)} to run", flush=True)
+    if args.limit:
+        todo = todo[: args.limit]  # run in bounded chunks; the checkpoint carries over
     with open(ckpt, "a", encoding="utf-8") as f:
         for _, (tid, part) in pmap(audit_task_logged, [(t, names) for t in todo], args.workers, progress="hack-audit"):
             f.write(json.dumps({"task_id": tid, "result": part}) + "\n")
             f.flush()
             done[tid] = part
+    left = [t for t in task_ids if t not in done]
+    if left:
+        print(f"{len(left)} tasks left; re-run to continue", flush=True)
+        return
     agg = defaultdict(lambda: defaultdict(float))
     for tid in task_ids:
         for name, a in done[tid].items():

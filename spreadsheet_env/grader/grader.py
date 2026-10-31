@@ -339,26 +339,22 @@ class Grader:
         cache = self._ref_cache.setdefault(("sensitivity", task.task_id), (task, {}))
         if cache[0] is not task:
             cache = self._ref_cache[("sensitivity", task.task_id)] = (task, {})
-        memo = cache[1]
-        if (k, i) in memo:
-            return memo[(k, i)]
-        runs = self._reference_runs(task)
-        cached = self._ref_cache.get(("compiled", task.task_id))
-        if cached is None or cached[0] is not task:
-            cached = self._ref_cache[("compiled", task.task_id)] = (task, task.reference.compile())
-        cw = cached[1]
-        hit = False
-        for sc, rr in zip([{}] + list(task.scenarios), runs):
-            v = sc.get(i, runs[0].get(i))
-            v = v if isinstance(v, float) else 0.0
-            for new in (v * 1.37 + 0.731, v * 0.71 - 0.219):
-                if not close(cw.run({**sc, i: new}).get(k), rr.get(k), 1e-9):
-                    hit = True
-                    break
-            if hit:
-                break
-        memo[(k, i)] = hit
-        return hit
+        memo = cache[1]  # input -> every target that responds to it (one pass per input)
+        if i not in memo:
+            runs = self._reference_runs(task)
+            cached = self._ref_cache.get(("compiled", task.task_id))
+            if cached is None or cached[0] is not task:
+                cached = self._ref_cache[("compiled", task.task_id)] = (task, task.reference.compile())
+            cw = cached[1]
+            moved = set()
+            for sc, rr in zip([{}] + list(task.scenarios), runs):
+                v = sc.get(i, runs[0].get(i))
+                v = v if isinstance(v, float) else 0.0
+                for new in (v * 1.37 + 0.731, v * 0.71 - 0.219):
+                    out = cw.run({**sc, i: new})
+                    moved |= {t for t in task.target_keys if t not in moved and not close(out.get(t), rr.get(t), 1e-9)}
+            memo[i] = frozenset(moved)
+        return k in memo[i]
 
     def structure_problems(self, task: Task, cw: CompiledWorkbook, label, refine: bool = True) -> List[str]:
         out: List[str] = []
@@ -378,18 +374,19 @@ class Grader:
             # syntactic rule: that is what tells a computed balance check from a typed 0
             # (HACK_LOG #4).
             if missing and refine and k not in self._check_keys(task):
-                kept = {i for i in missing if self._sensitive(task, k, i)}
                 # a target that never moves in the graded runs may be left without its inputs only
                 # if it is constant across a much larger fresh sample too: a default flag that no
-                # graded scenario trips is not a structural zero (HACK_LOG #27)
-                if kept or not self._graded_constant(task, k) or self._constant_everywhere(task, k):
-                    missing = kept
+                # graded scenario trips is not a structural zero (HACK_LOG #27). Otherwise one
+                # input it responds to is enough to fail it (the count below is then a lower bound)
+                if not self._graded_constant(task, k) or self._constant_everywhere(task, k):
+                    first = next((i for i in missing if self._sensitive(task, k, i)), None)
+                    missing = {first} if first is not None else set()
             if missing:
                 disconnected.append((k, len(missing)))
         if disconnected:
             k, n = disconnected[0]
             out.append(f"{len(disconnected)} target cell(s) do not depend on inputs their logic requires "
-                       f"(hard-coded or disconnected), e.g. {label(k)} misses {n} input(s)")
+                       f"(hard-coded or disconnected), e.g. {label(k)} misses {n if n > 1 else 'at least 1'} input(s)")
         for srcs, bans, why in task.forbidden_deps:
             banned = set(bans)
             for k in srcs:
