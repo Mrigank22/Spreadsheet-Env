@@ -58,6 +58,23 @@ Taken together, prior work already includes:
    frontier model.
 7. **A clean license.** All tasks are generated, so no forum or IP-encumbered data is used.
 
+### Status of each gap (2026-10-31)
+
+| # | Gap | Status |
+|---|---|---|
+| 1 | Reference-free oracles | **Done.** Identities and homogeneity alone detect 77.5% of latent bugs (kill matrix) |
+| 2 | Deterministic grading of free-layout builds | **Done.** Outputs contract, 0 false positives on equivalent rewrites |
+| 3 | Circular schedules and sensitivity grids | **Done.** Convergence-gated scenarios; grid checked against the agent's own model |
+| 4 | Latent-bug repair | **Done.** A value-only grader detects 0.1% of the 697 latent bugs; the full grader 100% |
+| 5 | Published RL ablation | **Not done.** A 100-demo SFT pilot did not move a 1.7B model; the run needs ~1k demos or a larger GPU |
+| 6 | Unsaturated difficulty for frontier models | **Not achieved.** Claude Opus 5.5 (medium effort) solved every unambiguous task across 130 calibrated tasks, document tier included. Small models score 0%; no mid-size model was measured |
+| 7 | Clean license | **Done.** Every task is generated; Apache-2.0 |
+
+Added beyond the original list: legal-document specs (credit agreement, LPA, indenture, charter)
+generated clause by clause from the reference's parameters, nine structured-finance domains, and
+an adaptive red-team in which a frontier model that knows the grader tries to earn reward
+without doing the task (`scripts/red_team.py`, README).
+
 ## Sources
 
 - https://arxiv.org/abs/2605.22642

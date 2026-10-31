@@ -2,7 +2,7 @@
 
 ![python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![license](https://img.shields.io/badge/license-Apache--2.0-green)
-![tests](https://img.shields.io/badge/tests-345%20passing-brightgreen)
+![tests](https://img.shields.io/badge/tests-346%20passing-brightgreen)
 ![openenv](https://img.shields.io/badge/OpenEnv-0.9-purple)
 
 An **OpenEnv** reinforcement-learning environment in which an LLM agent **builds, repairs and
@@ -82,7 +82,7 @@ FormulaGym, SpreadsheetBench 2's debugging set. This project does not claim it (
 
 ```bash
 python -m venv .venv && .venv/Scripts/pip install -e ".[dev]"     # Linux/macOS: .venv/bin/pip
-pytest                                                             # 345 tests, ~1 min on 8 cores
+pytest                                                             # 346 tests, ~1 min on 8 cores
 ```
 
 ```python
@@ -107,6 +107,29 @@ wrapper; see [Interfaces](#interfaces).
 
 Every task id `<family>-d<level>-s<seed>` is deterministic. Training seeds are `0–99,999`, test
 seeds `1,000,000–1,000,999`.
+
+**How the levels get harder.** Each level switches on more mechanics and gives less help:
+- core builds show a model map at levels 1–4 only;
+- frontier builds give a per-row formula memo at levels 1–2, then only the term sheet;
+- repairs go from one named bug to 3–4 undisclosed bugs, two of them latent, with no-bug canaries.
+
+Measured on 430 tasks (every family × level, 2 seeds; medians; `scripts/level_stats.py`):
+
+| Level | Frontier build: cells / distinct formulas / conditionals / same-period chain | Document build: cells / formulas / conditionals / prompt tokens | Repair (frontier): bugs / latent |
+|---|---|---|---|
+| 1 | 101 / 17 / 3 / 7 | 122 / 18 / 8 / 2.6k | 1.7 / 0.3 |
+| 2 | 136 / 19 / 5 / 8 | 176 / 24 / 14 / 3.1k | 1.6 / 1.1 |
+| 3 | 213 / 26 / 7 / 9 | 224 / 30 / 17 / 3.7k | 2.3 / 1.3 |
+| 4 | 241 / 31 / 11 / 11 | 276 / 42 / 22 / 4.0k | 2.4 / 1.9 |
+| 5 | 277 / 34 / 16 / 13 | 326 / 48 / 26 / 4.3k | 3.1 / 2.0 |
+
+Column definitions:
+- *Cells*: formula cells to write.
+- *Distinct formulas*: a row filled right counts once.
+- *Conditionals*: IF/MIN/MAX/IRR-type calls in those formulas.
+- *Chain*: the longest run of rows within one period where each feeds the next.
+
+Core builds go from 9 to 258 cells (3 → 43 formulas), and level 5 is circular.
 
 ### Core: three-statement models and DCF
 
@@ -181,7 +204,7 @@ Base cases were tuned to look like real deals, for example:
 |---|---|---|
 | `integrity` | Inputs, labels and given formulas unchanged; no parse errors, forbidden functions (`INDIRECT`, `OFFSET`, volatile), unexpected cycles or runaway size | no |
 | `base` | Every target cell matches the reference at the base inputs (what value-matching benchmarks check) | yes |
-| `perturb` | Every target cell matches the reference under 10 coverage-selected scenarios plus a currency-scaling scenario | yes |
+| `perturb` | Every target cell matches the reference under 10 coverage-selected scenarios plus a currency-scaling scenario; a submission that passes everything else also faces 160 hidden scenarios | yes |
 | `identities` | Balance sheet balances, cash and roll-forward ties, waterfall and reserve identities, tax-rate reconciliation | **no** |
 | `homogeneity` | All money inputs ×3.7 ⇒ all money outputs ×3.7 (catches embedded constants) | **no** |
 | `structure` | Each target depends on every input its logic actually responds to (check rows: every input of their formula); no forbidden dependencies (plugs) | partly |
@@ -195,11 +218,13 @@ available, and each component is reported separately.
 | Claim | Result | Reproduce |
 |---|---|---|
 | The formula engine computes what spreadsheet apps compute | **100%** agreement with formualizer on 351,714 formula cells (incl. 79,618 in circular models) and with ironcalc on 271,823; 100% with LibreOffice on 138,011 acyclic cells (LibreOffice does not converge on circular models, see the hack log) | `scripts/crosscheck_engines.py` |
-| The grader does not reject correct work | **0 / 612** equivalent rewrites rejected (core), **0 / 810** (frontier + credit agreement), **0 / 264** (document tier) | `scripts/exp_false_positives.py` |
+| The grader does not reject correct work | **0 / 1,020** equivalent rewrites rejected (core), **0 / 1,287** (frontier), **0 / 396** (document tier); re-run after the red-team fixes | `scripts/exp_false_positives.py` |
 | The grader catches real bugs | **2,328 / 2,328** injected bugs detected (all 697 latent ones), ground truth from 300 independent scenarios per model | `scripts/exp_kill_matrix.py --seeds 30` |
 | Cheats are blocked | 14 strategies on 80 core tasks, 13 on 162 frontier tasks, 13 on 72 document tasks: **mean reward 0.000** for every cheat (honest model 1.000). A value-only grader accepts most of them | `scripts/hack_audit.py` |
 | Every task is solvable | reference 80/80 through the multi-turn tool loop; expert patches solve every frontier and document task type | `scripts/evaluate.py`, `tests/` |
 | Doing nothing scores ~0 | 4/100 core; 2/162 frontier; 3/72 document: all of them genuine no-bug repair canaries | `scripts/evaluate.py --policy noop`, hack audit |
+| A frontier model that knows the grader cannot game it | Adaptive red team: Claude Opus 5.5 got the full grader design and the list of blocked exploits, 12 held-out tasks, 2 rounds with grader feedback ($0.91). One genuine exploit was found (a branch only the submission has, HACK_LOG #26) and closed; **0 of 24 answers now earn reward for a wrong model**. Five rewarded answers changed clauses that cannot bind and equal the reference in 1,000 fresh scenarios | `scripts/red_team.py`, `results/red_team/` |
+| Relaxed rules hold up | White-box attacks on the #19 / #24 relaxations: jammed inputs and collapsed branches score 0. Typed constants are accepted only for cells that stay constant in 600 fresh scenarios: of 143,350 targets, 3 tasks keep a cell that moves in under 0.5% of scenarios (#27) | `scripts/hack_audit.py --attacks`, `scripts/constant_target_audit.py` |
 | No input crashes the grader | 12,000 fuzzed formulas per test run | `tests/test_engine.py` |
 
 `=IFERROR(<correct formula>, …)` scores 0.67–0.75 in the hack audits: in those tasks it wraps the
@@ -312,7 +337,7 @@ spreadsheet_env/
   server/               OpenEnv server (FastAPI + MCP)
 scripts/                experiments: kill matrix, hack audit, false positives, engine cross-check,
                         calibration batches, example rendering, SFT/GRPO training
-tests/                  345 tests (engine fuzzing, every family, frontier and document tiers)
+tests/                  346 tests (engine fuzzing, every family, frontier and document tiers)
 docs/                   PLAN (design record), HACK_LOG, research notes, examples/
 results/                the evidence behind every number in this README (JSON / JSONL)
 ```
@@ -321,7 +346,7 @@ results/                the evidence behind every number in this README (JSON / 
 
 ```bash
 pip install -e ".[dev,crosscheck,agents]"
-pytest                                                             # 345 tests
+pytest                                                             # 346 tests
 python scripts/hack_audit.py --seeds 4                             # core red-team table
 python scripts/hack_audit.py --families frontier --levels 5,3,1 --seeds 2
 python scripts/exp_false_positives.py --seeds 12                   # equivalence suite (core)
@@ -346,7 +371,7 @@ Grading is pure Python, so every experiment spreads independent units over a pro
 |---|---|
 | Kill matrix (97 models, 2,328 mutants, 300 truth scenarios each) | 6.9 min (14 workers) |
 | Engine cross-check (1,691 workbooks) | 59 s (14 workers) |
-| Test suite (345 tests) | 41–50 s (6–8 workers) |
+| Test suite (346 tests) | 41–50 s (6–8 workers) |
 | Core hack audit (80 tasks × 16 attacks) / core false-positive suite (612 rewrites) | ~2 min / 17 s |
 
 Grading a submission takes 10–60 ms (about 150 ms for circular models; up to ~1 s for 60-month
@@ -360,9 +385,12 @@ monthly models). Task generation is deterministic and cached.
   cannot be detected (the agent's internal line items are unknown). Plugs that hide errors are
   caught.
 - **Constant targets.** A cell whose correct value never changes may be typed as a constant (a
-  structural zero), except for check rows, which must stay computed. A flag that no scenario and
-  no single-input move can trigger could therefore be typed. Coverage-guided scenarios make this
-  rare.
+  structural zero), except for check rows, which must stay computed. "Never changes" means across
+  the graded scenarios, single-input moves and 600 fresh scenarios (HACK_LOG #27). A typed flag
+  survives only if it is wrong in under ~0.5% of plausible scenarios: 3 of 430 audited tasks.
+- **Rare-region exploits.** Wrong logic confined to a region that none of the 10 graded and 160
+  hidden scenarios reaches cannot be seen (HACK_LOG #26: a region hit in 3.4% of scenarios is
+  missed with probability ~0.4%).
 - **Portable formula subset.** OFFSET/INDIRECT, volatile functions, implicit intersection and
   spilled arrays are rejected by design; data tables are written as formulas.
 - **Circular models** are solved to a 1e-14 relative tolerance; scenarios are restricted to those

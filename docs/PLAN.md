@@ -127,3 +127,11 @@ Planned (roadmap):
 - **"Reference, no-op, paste, expert and equivalent-rewrite checks certify a task"**: insufficient.
   - All 270 frontier tasks passed them, yet real model answers exposed 7 kinds of environment defect in two batches (HACK_LOG #15, #16, #19–23).
   - Real answers take routes the rewriter never generates: identities instead of plugs, literal readings, realistic conventions.
+
+## 8. Hardening after the adaptive red team (2026-10-31)
+
+| Decision | Evidence |
+|---|---|
+| A submission that passes every oracle also faces 160 hidden scenarios | Red team, round 2: `IF(tax > 50%, 0, …)` passed because the graded set's only high-tax scenario had a pre-tax loss (#26). Coverage of the submission's own arms was tried first and **rejected**: with a high tax rate the submission never evaluates its `MAX`, so the difference comes from the reference's branch. Random hidden scenarios catch it; false positives stay 0 / 2,703 |
+| "Structural constant" = constant in 600 fresh reference scenarios, not only the graded ones | Constant-target audit: 14 of 143,350 targets were typable yet move for other inputs (#27); now 3 tasks remain, each wrong in < 0.5% of scenarios |
+| Rewarded red-team answers are judged on 1,000 fresh scenarios | 5 of 6 rewarded round-2 answers changed clauses that never bind and equal the reference everywhere: not exploits, since no value-based grader can or needs to separate them |

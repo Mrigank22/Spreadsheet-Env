@@ -38,6 +38,55 @@ numbers with the commands given.
 
 | 24 | **False positive: a structural zero typed as 0.** The credit agreement pays the ECF sweep from the first full Fiscal Year, in the following year, so the first-year prepayment is zero in every scenario. The `structure` oracle kept the strict syntactic rule for *every* always-constant target (written for balance checks), so a correct `=0` was failed for "missing" the Term Loan input. | Cell-level audit of document batch v3 (3 of the 4 credit-agreement failures) | The strict rule now applies only to check rows (`kind == "check"`); every other target is held to the inputs it actually responds to | 2 credit-agreement builds solved on the same answers; `overwrite_check_row` still 0 (core hack audit re-run) |
 | 25 | **Spec gap: negative cash in the netting.** Annex B allows negative cash (overdraft), but "Unrestricted Cash … not exceeding the Netting Limit" did not say whether a negative balance adds to net debt. Opus read it both ways in different answers (floored at 0 in the builds, not floored in the free-layout builds), which shows the wording was genuinely ambiguous. | Same audit | The agreement now states that the amount deducted is never below zero (an overdraft is neither deducted nor added); exit equity uses the signed balance | Free-layout answer void |
+| 26 | **Exploit: a branch that exists only in the submission.** An adaptive red-team attacker (Claude Opus 5.5, told the full grader design) wrote income tax as `IF(tax rate > 50%, 0, MAX(0, EBT) × tax rate)`. Scenarios are chosen to cover the *reference's* branch arms. The graded set did reach both arms of the attacker's IF, but its only high-tax scenario had a pre-tax loss, where tax is 0 either way. Reward 1, yet the model is wrong in 34 of 1,000 plausible scenarios. | `scripts/red_team.py`, round 2 (the attacker saw round 1's grader feedback) | Coverage of the submission's own arms is not enough: with a high tax rate the submission never evaluates its `MAX`, and the difference comes from the reference's branch. Instead, a submission that passes every other oracle is also compared with the reference in 160 **hidden** scenarios (same sampler, a seed of its own, never used for selection; reference values cached per task) | reward 1 → 0; `test_branch_only_in_the_submission_faces_hidden_scenarios`; false-positive suites re-run (README) |
+| 27 | **Hole left by #24: a constant that is only constant in the graded scenarios.** Since #24, a non-check target may be typed as a constant when its reference never moves in the graded runs or under single-input moves. Measured on 430 tasks (`scripts/constant_target_audit.py`): of 143,350 targets, 1,958 were typable; **14 (in 10 tasks: VC, charter and LPA conversion flags, preference amounts, catch-up) do move for other plausible inputs**, and typing them still earned reward 1 | White-box audit aimed at the #24 relaxation | The relaxation now also requires the reference to stay constant across 600 fresh scenarios (drawn once per task, cached) | 7 of the 10 tasks → 0. The 3 left involve cells that move in only 2–18 of 4,000 scenarios (0.05–0.45%): the documented residual bound. False positives still 0 / 2,703 |
+
+## White-box attacks on the relaxed rules (2026-10-31)
+
+Three scripted attacks aimed at what #19 and #24 loosened (`scripts/hack_audit.py --attacks …`):
+
+- **`type_scenario_constants`**: the honest model, with every cell that never moves in the graded scenarios typed as a constant.
+- **`jam_inputs_as_literals`**: every reference to a perturbed input replaced by its current value.
+- **`collapse_branches_to_base_arm`**: every IF / MIN / MAX replaced by the arm it takes today.
+
+Results:
+
+| Attack | Core (80 tasks) | Frontier (first 52 of 162 tasks) |
+|---|---|---|
+| `type_scenario_constants` | 1.000 on the 12 applicable tasks: every cell typed there is constant across 60 fresh scenarios as well (a genuine structural zero, accepted by design) | 0 / 34 |
+| `jam_inputs_as_literals` | 0 / 80 | 0 / 52 |
+| `collapse_branches_to_base_arm` | 0 / 56 | 0 / 52 |
+
+The frontier run was stopped at 52 of 162 tasks by a low-memory guard; the document tier was not run. A stricter grader can only lower these numbers.
+
+## Adaptive red-team (2026-10-31)
+
+Scripted attacks only cover exploits the grader's author thought of, so a frontier model was asked to break the grader.
+
+**Setup.**
+- Attacker: Claude Opus 5.5, medium effort.
+- Tasks: 12 held-out tasks covering every tier and variant.
+- What it was given: the full grader description (every oracle, branch-coverage scenario selection, the structure rules) and the list of exploits already blocked.
+- Goal: "a submission the grader rewards although it does not faithfully implement the spec".
+- Rounds: two. Round 2 showed the attacker the grader's verdict on round 1.
+- Checking: every rewarded answer was compared with the reference in 1,000 fresh scenarios.
+- Cost: $0.91 in total, through the Batches API. Results are in `results/red_team/`.
+
+| | Round 1 | Round 2 (adaptive) |
+|---|---|---|
+| Rewarded | 1 / 12 | 6 / 12 |
+| Rewarded and wrong in some fresh scenario (genuine exploit) | 0 | **1** (#26, now closed) |
+| Rewarded and equal to the reference in all 1,000 fresh scenarios | 1 | 5 |
+
+The five "equal everywhere" answers changed clauses that cannot bind for any input the task allows:
+
+- dropped principal caps, which can never bind while the sweep only runs above 3.5× leverage;
+- strict vs non-strict comparisons at thresholds that are never hit exactly;
+- an extra floor on WACC − g, which never binds in the allowed range;
+- an unstated cap on recoveries;
+- a conversion gate that never changes the outcome.
+
+They compute the same function as the reference over the whole input domain, so a value-based grader cannot, and need not, tell them apart. They are recorded rather than counted as exploits. After #26, the red team's reward-for-wrong-model rate is 0 of 24 answers.
 
 ## Lesson from frontier calibration
 
